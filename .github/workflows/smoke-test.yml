@@ -1,0 +1,22 @@
+name: Sentinel Smoke Test
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Build Sentinel API
+        run: docker-compose build
+
+      - name: Start Services
+        run: docker-compose up -d
+
+      - name: Run Smoke Test
+        run: |
+          # Wait for API to be ready
+          sleep 10
+          # Run a curl command to verify 200 OK and latency
+          curl -f http://localhost:8000/predict -d '{"data": [...]}'

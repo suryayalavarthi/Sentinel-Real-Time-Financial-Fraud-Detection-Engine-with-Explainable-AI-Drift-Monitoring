@@ -317,13 +317,14 @@ seaborn>=0.11.0
 - [x] **Business Metrics**: Custom loss function and ROI analysis ✅
 - [x] **API Deployment**: FastAPI endpoint with Docker containerization ✅
 - [x] **Model Monitoring**: PSI/KL-Divergence drift detection sidecar ✅
-- [ ] **Model Explainability**: SHAP values for feature importance
-- [ ] **Parallel Processing**: Use `dask` for multi-core groupby operations
-- [ ] **GPU Acceleration**: Implement with `cuDF` (RAPIDS)
+- [x] **Model Explainability**: SHAP integration for GDPR-compliant reason codes ✅
+- [ ] **CI/CD Integration**: Automated smoke tests and build verification via GitHub Actions
+- [ ] **Parallel Processing**: Use `dask` for multi-core scalability
+- [ ] **GPU Acceleration**: Implement with `cuDF` (RAPIDS) for faster training
 - [ ] **Additional Features**:
   - Geographic velocity (distance between transactions)
   - Hour-of-day transaction patterns
-  - Device fingerprint frequency
+  - Device fingerprint frequencyan
   
 ## 📖 References
 
